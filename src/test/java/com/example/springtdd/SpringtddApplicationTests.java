@@ -34,5 +34,7 @@ class SpringtddApplicationTests {
     public void given_테스트() {
         BDDMockito.given(person.getAge()).willReturn(20);
         Assertions.assertThat(person.getAge()).isEqualTo(20);
+
+        // STH TODO
     }
 }
