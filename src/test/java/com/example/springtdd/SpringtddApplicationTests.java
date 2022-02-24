@@ -25,16 +25,14 @@ class SpringtddApplicationTests {
     @Mock
     Person person;
 
+    @Mock
+    ItemRepo itemRepo;
 
+    // INFO @Mock으로 만들려면 public 생성자가 있어야 한다.
+    // INFO BDDMockito로 given을 한다
     @Test
-    public void 랜덤숫자_반환_테스트() {
-
+    public void given_테스트() {
         BDDMockito.given(person.getAge()).willReturn(20);
-
         Assertions.assertThat(person.getAge()).isEqualTo(20);
-
-
-
     }
-
 }
